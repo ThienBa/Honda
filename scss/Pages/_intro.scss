@@ -1,0 +1,60 @@
+.intro {
+    background-color: $color-grey;
+    .intro__container {
+        @include section-padding;
+        .intro__left,
+        .intro__right {
+            position: relative;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            background-clip: content-box;
+            margin-bottom: $mg-2;
+            margin-top: $mg-up-3;
+        }
+        .intro__left {
+            background-color: $color-black;
+            background-image: url("../img/our-vehicle-intro-1.jpg");
+            .intro__leftContent {
+                color: $color-white;
+                position: absolute;
+                bottom: 10%;
+                font-size: $font-size-1;
+                width: 96%;
+                h4 {
+                    font-weight: $font-weight-bold;
+                    margin-bottom: $mg-2;
+                    font-size: $font-size-2;
+                }
+                p {
+                    font-weight: $font-weight-300;
+                    margin-bottom: $mg-3;
+                    padding: 0 $pd-3;
+                }
+            }
+        }
+        .intro__right {
+            background-image: url("../img/our-vehicles-intro-2.jpg");
+            .intro__rightContent {
+                color: $color-white;
+                position: absolute;
+                top: 30%;
+                left: 5%;
+                font-size: $font-size-2;
+                width: 40%;
+                h4,
+                p {
+                    font-weight: $font-weight-300;
+                    margin-bottom: $mg-3;
+                    padding-right: $pd-3;
+                }
+                h4 {
+                    background-color: $color-dark-blue-100;
+                    display: inline-block;
+                    padding: $pd-1 $pd-2;
+                    font-size: $font-size-2;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    #navbar {
+        background-color: $color-blue-100;
+        padding: 0;
+        a {
+            color: $color-white;
+            border-right: $boder-1;
+            border-left: $boder-1;
+            text-decoration: none;
+            font-size: $font-size-1;
+            padding: $pd-3 $pd-4;
+            i {
+                transform: rotate(0);
+                transition: all .3s;
+            }
+            &.active {
+                background-color: $color-white;
+                color: $color-black;
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    padding: $pd-3 $pd-4;
+                }
+                .discover-menu {
+                    left: unset;
+                    right: -30%;
+                    width: 40rem;
+                    padding: $pd-4;
+                    box-shadow: $box-shadow;
+                    border: none;
+                    &::before {
+                        @include arrow(unset, 15%);
+                    }
+                    .dropdown-menuDetail {
+                        display: flex;
+                        &:hover {
+                            background-color: transparent;
+                        }
+                        >div {
+                            width: 50%;
+                        }
+                        h3 {
+                            margin-bottom: $mg-2;
+                            color: $color-dark-blue-200;
+                            font-weight: $font-weight-bold;
+                        }
+                        .dropdown-detailRight {
+                            padding-left: $pd-3;
+                        }
+                        ul {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            li {
+                                margin-bottom: $mg-2 - 5;
+                                a {
+                                    color: $color-blue-200;
+                                    border: none;
+                                    padding: 0;
+                                    font-weight: $font-weight-bold;
+                                    font-size: $font-size-1;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .dropdown-menuSocial {
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: $mg-3;
+                        &:hover {
+                            background-color: transparent;
+                        }
+                        i {
+                            @include social-icon;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar {
+            padding: 0;
+        }
+        a:first-child {
+            padding: 0 $pd-4;
+        }
+    }
+}
+
+.no-border {
+    border: 0 !important;
+}

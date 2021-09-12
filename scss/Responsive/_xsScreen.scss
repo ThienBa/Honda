@@ -1,0 +1,180 @@
+@media screen and (max-width: 576px) {
+    #header {
+        #navbar {
+            a {
+                padding: $pd-1 $pd-2;
+                &:first-child {
+                    padding: $pd-1 $pd-2;
+                    margin: 0;
+                }
+            }
+            #search-area {
+                &::before {
+                    border-bottom-width: 0;
+                }
+                background-color: $color-blue-100;
+                padding: $pd-1;
+                i {
+                    color: $color-white;
+                    font-size: $font-size-1;
+                }
+                input {
+                    width: 60%;
+                    height: 3.5rem;
+                    border: 2px solid $color-white;
+                    border-radius: 5px;
+                    padding-bottom: $pd-1 - 1;
+                    padding-left: $pd-1;
+                    font-size: $font-size-1;
+                    color: $color-white;
+                    background-color: transparent;
+                    &::placeholder {
+                        font-size: $font-size-1;
+                        color: $color-white;
+                    }
+                    font-weight:$font-weight-300;
+                    font-size: $font-size-3;
+                    color:$color-blue-200;
+                }
+            }
+            .navbar-collapse {
+                border-top: $boder-2;
+            }
+            .navbar-nav {
+                .nav-item {
+                    .discover-menu {
+                        &::before {
+                            @include arrow(7%, unset);
+                            top: 4.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #vehicles {
+        #vehicles__content {
+            padding: 0 $pd-2;
+            .vehicles__nav {
+                ul {
+                    li {
+                        display: inline-block;
+                        margin-bottom: $mg-2;
+                        a {
+                            padding: $pd-1 $pd-2;
+                            border: none;
+                        }
+                    }
+                }
+            }
+            #vehicles__list {
+                background-color: $color-grey;
+                padding: $pd-1;
+                max-height: 700px;
+                padding-bottom: $pd-1 * 2;
+            }
+        }
+        .container--config {
+            padding: 0 15%;
+        }
+    }
+    #swiperSlider {
+        margin-top: $mg-5;
+    }
+    #our-vehicles {
+        .carousel-caption-config {
+            width: 60%;
+            left: 20%;
+            margin: auto;
+            text-align: center;
+            bottom: 50px;
+            top: unset;
+            font-size: $font-size-1 - 0.2;
+            .carousel-caption-detail {
+                .carousel-detail-content {
+                    h2 {
+                        font-size: $font-size-3;
+                    }
+                    p {
+                        font-size: $font-size-1 - 0.2;
+                    }
+                }
+            }
+        }
+        .carousel-caption-footer {
+            width: 100%;
+            border: none;
+            bottom: 2%;
+            justify-content: center;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            i {
+                font-size: $font-size-3;
+                padding: $pd-2;
+            }
+        }
+        .carousel-control-prev {
+            left: 0rem;
+        }
+        .carousel-control-next {
+            right: 0rem;
+        }
+    }
+    .intro {
+        .intro__container {
+            .intro__right {
+                .intro__rightContent {
+                    width: 90%;
+                    left: 10%;
+                }
+                margin-top: $mg-2;
+            }
+        }
+    }
+    #our-vehicles {
+        h1 {
+            font-size: $font-size-5;
+        }
+        .carousel-indicators-xs {
+            position: absolute;
+            top: 0;
+            left: 20%;
+            z-index: 9;
+        }
+        .carousel-inner {
+            margin-top: $mg-3;
+        }
+    }
+    #search-field {
+        padding: 0;
+        flex-wrap: wrap;
+        div {
+            width: 100%;
+            border-right: none;
+            border-top: $boder-3;
+            padding: $pd-1 $pd-2;
+            input,
+            i,
+            input::placeholder {
+                font-size: $font-size-2;
+            }
+            input {
+                width: 65%;
+            }
+            .btn-search {
+                border-color: $color-blue-100;
+                border-radius: 40px;
+                color: $color-blue-200;
+                &:hover {
+                    background-color: $color-blue-100;
+                    color: $color-white;
+                }
+            }
+        }
+        p {
+            padding: $pd-2;
+            text-align: center;
+        }
+    }
+}

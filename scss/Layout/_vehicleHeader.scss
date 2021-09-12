@@ -1,0 +1,136 @@
+#vehicles {
+    background-color: $color-blue-overlay;
+    #vehicles__content {
+        position: relative;
+        .vehicles__nav {
+            background-color: $color-white;
+            text-align: center;
+            padding: $pd-3 0;
+            ul {
+                list-style: none;
+                margin: 0;
+                li {
+                    display: inline;
+                    a {
+                        padding: $pd-1 $pd-4;
+                        font-weight: $font-weight-bold;
+                        color: $color-dark-blue-200;
+                        border-right: $boder-2;
+                        text-decoration: none;
+                        font-size: $font-size-1;
+                        transition: all .3s;
+                        &:hover {
+                            color: $color-blue-200;
+                        }
+                    }
+                    &.active {
+                        a {
+                            color: $color-blue-200;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        #vehicles__list {
+            background-color: $color-grey;
+            padding: $pd-6;
+            max-height: 700px;
+            padding-bottom: $pd-6 * 2;
+            .vehicles__title {
+                h1 {
+                    background-color: $color-grey;
+                    position: relative;
+                    top: $mg-up-2;
+                    padding: 0 $pd-1;
+                    color: $color-dark-blue-200;
+                    font-weight: $font-weight-bold;
+                    font-size: $font-size-3;
+                    i {
+                        font-size: $font-size-3 * 0.5;
+                        position: relative;
+                        top: $mg-up-1;
+                    }
+                    span {
+                        font-weight: $font-weight-normal;
+                    }
+                }
+            }
+            .vehicles__product {
+                color: $color-dark-blue-200;
+                margin-bottom: $mg-3;
+                &:hover {
+                    .vehicles__img {
+                        img:first-child {
+                            display: none;
+                        }
+                        img:last-child {
+                            display: block;
+                        }
+                    }
+                }
+                .vehicles__img {
+                    img:last-child {
+                        display: none;
+                    }
+                }
+                h2 {
+                    font-size: $font-size-2;
+                    font-weight: $font-weight-bold;
+                    margin-bottom: $mg-1;
+                }
+                .vehicles__info {
+                    margin-bottom: $mg-2;
+                    h3 {
+                        font-weight: $font-weight-normal;
+                        font-size: $font-size-3;
+                    }
+                    p {
+                        font-size: $font-size-1;
+                        margin-bottom: $mg-1;
+                    }
+                }
+            }
+        }
+        #vehicles__close {
+            background-color: $color-grey;
+            width: $vehicle-close-width;
+            padding: $pd-2 0;
+            text-align: center;
+            position: absolute;
+            left: 100% - $pd-7;
+            border-radius: 0 7px 7px 0;
+            cursor: pointer;
+            color: $color-blue-100;
+            &:hover {
+                color: $color-dark-blue-100;
+                .vehicles__circle {
+                    border-color: $color-dark-blue-100;
+                }
+            }
+            .vehicles__circle {
+                width: $vehicle-circle-size;
+                height: 25px;
+                border: 1px solid $color-blue-100;
+                text-align: center;
+                border-radius: 50%;
+                margin: auto;
+                i {
+                    font-size: $font-size-1;
+                    line-height: 25px;
+                }
+            }
+            p {
+                font-size: $font-size-1;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+    .container--config {
+        padding: 0 $pd-7;
+    }
+}
+
+.hide-vehicles {
+    display: none;
+}
